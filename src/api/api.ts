@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = import.meta.env.PUBLIC_BASE_URL_BACK;
+const BASE_URL = "https://crudbb.netlify.app/.netlify/functions/server";
 export const api = axios.create({
   baseURL: BASE_URL,
 });
