@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "rsbuild build --legacy-peer-deps",
-    "vercel-build": "npm install --legacy-peer-deps",
+    "build": "rsbuild build",
+    "vercel-build": "npm install --legacy-peer-deps && npm dedupe && npm run build",
     "dev": "rsbuild dev --open",
     "db": "json-server --watch db.json --port 3002",
     "format": "prettier --write .",
@@ -14,9 +14,6 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage"
-  },
-  "engines": {
-    "node": ">=16.x"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
