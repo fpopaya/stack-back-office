@@ -1,12 +1,7 @@
 {
  "build": {
    "env": {
-     "NODE_ENV": "production"
-   },
-   "cache": {
-     "paths": [
-       "node_modules"
-     ]
+     "NODE_VERSION": "18.x"
    }
  }
 }
