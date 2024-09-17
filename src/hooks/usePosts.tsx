@@ -1,6 +1,6 @@
 import { PostService } from '@/services';
 import { useStore } from '@/store';
-import { Constants } from '@/utils';
+// import { Constants } from '@/utils';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { toast } from 'sonner';
 import { useShallow } from 'zustand/react/shallow';
@@ -36,7 +36,7 @@ export const usePosts = () => {
       }
     },
     placeholderData: keepPreviousData,
-    staleTime: Constants.CACHE_TIME_GET_LIST_POST,
+    staleTime: 300000,
   });
 
   const pagination = postsQuery.data?.pagination;

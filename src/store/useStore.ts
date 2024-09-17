@@ -1,5 +1,5 @@
 import { Filter } from '@/types';
-import { Constants } from '@/utils';
+// import { Constants } from '@/utils';
 import { create } from 'zustand';
 
 interface PaginationState {
@@ -19,7 +19,7 @@ interface PaginationState {
 
 export const useStore = create<PaginationState>((set) => ({
   page: 1,
-  perPage: Constants.PER_PAGE_GET_LIST_POST,
+  perPage: 10,
   previousPage: 1,
   selectedPostId: null,
   filterPost: {

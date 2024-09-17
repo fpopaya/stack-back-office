@@ -1,5 +1,5 @@
 import { PostService } from '@/services';
-import { Constants } from '@/utils';
+// import { Constants } from '@/utils';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 
 export const useStatus = () => {
@@ -7,7 +7,7 @@ export const useStatus = () => {
     queryKey: ['status'],
     queryFn: PostService.getStatus,
     placeholderData: keepPreviousData,
-    staleTime: Constants.CACHE_TIME_GET_LIST_STATUS,
+    staleTime:3600000,
   });
 
   return {
