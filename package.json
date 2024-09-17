@@ -3,7 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "rsbuild build --legacy-peer-deps && npm run build",
+    "build": "rsbuild build",
+    "vercel-build": "npm install --legacy-peer-deps && npm run build",
     "dev": "rsbuild dev --open",
     "db": "json-server --watch db.json --port 3002",
     "format": "prettier --write .",
