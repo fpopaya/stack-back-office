@@ -30,7 +30,7 @@ export const usePost = () => {
     },
     enabled: !!selectedPostId,
     placeholderData: keepPreviousData,
-    staleTime: Constants.CACHE_TIME_GET_POST,
+    staleTime: Constants?.CACHE_TIME_GET_POST,
   });
 
   const postUpdate = useMutation({
